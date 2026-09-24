@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom canvas grid background */
+.canvas-grid {
+  background-size: 24px 24px;
+  background-image: 
+    radial-gradient(circle, rgba(148, 163, 184, 0.25) 1.2px, transparent 1.2px);
+}
+
+.dark .canvas-grid {
+  background-image: 
+    radial-gradient(circle, rgba(148, 163, 184, 0.15) 1.2px, transparent 1.2px);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Animated edge connection pulse */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.flow-running-wire {
+  stroke-dasharray: 6 6;
+  animation: flowDash 0.8s linear infinite;
+}

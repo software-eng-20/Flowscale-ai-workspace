@@ -1,0 +1,6 @@
+{
+  "name": "FlowScale AI",
+  "description": "AI-Powered Visual Workflow Automation & Agent-Chain Builder. Build multi-step AI agents and workflows visually.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
